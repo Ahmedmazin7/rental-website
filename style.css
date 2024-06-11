@@ -1,0 +1,225 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'rubik',sans-serif;
+    list-style: none;
+    text-decoration: none;
+
+}
+
+:root{
+    --primary-color: #ff5700;
+    --secondary-color: #ff8500;
+    --third-color: #d6d3ce; 
+    --bg-color:#F7F7F7;
+
+    --big-font: 7rem;
+    --p-font:1rem;
+
+    --text-color:#565360;
+    --label-color:#908e9b;
+
+    --mobile-bigfont:2rem;
+    --mobile-smallfont:1rem;
+
+
+    --max-width:1200px;
+}
+.section_container{
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 5rem 1rem;
+
+}
+.section_subheader{
+    margin-bottom: 0.5rem;
+    position: relative;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: var(--bg-color);
+
+}
+.section_subheader::after{
+    position: absolute;
+    transform: translate(1rem, -50%);
+    content: "";
+    top: 50%;
+    height: 2px;
+    width: 4rem;
+    background-color: var(--primary-color);
+}
+.section_header{
+    max-width: 600px;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 3rem;
+    color: var(--third-color);
+
+}
+.section_description{
+    max-width: 600px;
+    margin-bottom: 1rem;
+    color: var(--bg-color);
+
+}
+nav{
+    position: fixed;
+    isolation: isolate;
+    width: 100%;
+    max-width: var(--max-width);
+    margin: auto;
+    z-index: 9;
+}
+.nav_bar{
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    background-color: var(--primary-color);
+
+}
+.nav_menu_btn{
+    font-size: 1.5rem;
+    color: var(--bg-color);
+
+}
+.nav_links{
+    position: absolute;
+    width: 25%;
+    height: 100vh;
+    padding: 2rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    background-color:var(--secondary-color) ;
+    transition: 0.5s;
+    z-index: -1;
+    transform: translateX(-100%);
+
+}
+.nav_links.open{
+    transform: translateX(0);
+
+}
+.nav_links a{
+    position: relative;
+    isolation: isolate;
+    padding-bottom: 8px;
+    color: var(--bg-color);
+    transition: 0.3s;
+
+}
+main{
+    background: url(shifaaz-shamoon-Rl9l9mL6Pvs-unsplash.jpg);
+    width:100%;
+    height:40vh;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container{
+    padding: 5rem 0rem 0rem 0rem;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 40vh;
+}
+.heading{
+    font-weight: 600;
+    color: var(--primary-color);
+    font-size: var(--mobile-smallfont);
+    background: transparent;
+    padding: 20px;
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+}
+.searchbar{
+    margin: 30px 0px 0px 0px;
+    width: 75%;
+    border: none;
+    border-radius: 15px;
+    padding: 5px;
+}
+.cards_container{
+    display: grid;
+    width: 100%;
+    max-width: var(--max-width);
+    background-color: var(--bg-color);
+    margin: 0px 0px 0px 0px;
+    height: 100vh;
+    border-radius: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    gap: 1rem;
+}
+.card{
+    background-color:var(--third-color);
+    width: 200px;
+    height: 300px;
+    margin: 2rem;
+    border-radius:15px ;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+}
+.image{
+    background-image: url(shifaaz-shamoon-Rl9l9mL6Pvs-unsplash.jpg);
+    width: 150px;
+    height: 150px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.card_title{
+    font-size: var(--mobile-bigfont);
+    padding: 10px;
+}
+@media (width > 768px){
+    header{
+        height: 100px;
+        width: 100%;
+        background-color: var(--primary-color);
+    }
+
+    nav{
+        padding: 2.5rem 2rem;
+        position: static;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .nav_bar{
+        padding: 0;
+        background-color: transparent;
+
+    }
+    .nav_menu_btn{
+        display: none;
+    }
+    .nav_links{
+        padding: 0px;
+        height: unset;
+        width: unset;
+        position: static;
+        transform: none;
+        flex-direction: row;
+        background-color: transparent;
+        
+    
+    }
+    .links{
+        padding: 10px;
+        border-radius: 15px;
+    }
+    .links:hover{
+        background-color: var(--secondary-color);
+        padding: 10px;
+    }
+
+
+}
