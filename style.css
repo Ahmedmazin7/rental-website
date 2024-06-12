@@ -14,13 +14,13 @@
     --third-color: #d6d3ce; 
     --bg-color:#F7F7F7;
 
-    --big-font: 7rem;
+    --big-font: 4rem;
     --p-font:1rem;
 
     --text-color:#565360;
     --label-color:#908e9b;
 
-    --mobile-bigfont:2rem;
+    --mobile-bigfont:1.5rem;
     --mobile-smallfont:1rem;
 
 
@@ -71,6 +71,12 @@ nav{
     max-width: var(--max-width);
     margin: auto;
     z-index: 9;
+
+}
+main{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 .nav_bar{
     padding: 1rem;
@@ -88,7 +94,7 @@ nav{
 }
 .nav_links{
     position: absolute;
-    width: 25%;
+    width: 150px;
     height: 100vh;
     padding: 2rem;
     margin-bottom: 10px;
@@ -114,10 +120,10 @@ nav{
     transition: 0.3s;
 
 }
-main{
-    background: url(shifaaz-shamoon-Rl9l9mL6Pvs-unsplash.jpg);
+.banner{
+    background: url(nastuh-abootalebi-yWwob8kwOCk-unsplash.jpg);
     width:100%;
-    height:40vh;
+    height:20rem;
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -129,6 +135,7 @@ main{
     display: flex;
     flex-direction: column;
     height: 40vh;
+    width: 100%;
 }
 .heading{
     font-weight: 600;
@@ -136,12 +143,16 @@ main{
     font-size: var(--mobile-smallfont);
     background: transparent;
     padding: 20px;
-    backdrop-filter: blur(5px);
     border-radius: 15px;
+}
+.headings{
+    font-size: var(--mobile-bigfont);
+    color: var(--primary-color);
+    padding: 20px;
 }
 .searchbar{
     margin: 30px 0px 0px 0px;
-    width: 75%;
+    width: 15rem;
     border: none;
     border-radius: 15px;
     padding: 5px;
@@ -149,24 +160,25 @@ main{
 .cards_container{
     display: grid;
     width: 100%;
-    max-width: var(--max-width);
     background-color: var(--bg-color);
-    margin: 0px 0px 0px 0px;
-    height: 100vh;
+    margin: 10px 0px 0px 0px;
+    padding: 10px 5px 10px 50px;
     border-radius: 15px;
     grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-    gap: 1rem;
+    gap: 2rem;
+    overflow: hidden;
+    justify-content: center;
 }
 .card{
     background-color:var(--third-color);
     width: 200px;
     height: 300px;
-    margin: 2rem;
     border-radius:15px ;
     display: flex;
     flex-direction: column;
-    padding: 20px;
     align-items: center;
+    margin: 0px 0px 0px 0px ;
+   text-align: left;
 }
 .image{
     background-image: url(shifaaz-shamoon-Rl9l9mL6Pvs-unsplash.jpg);
@@ -174,10 +186,17 @@ main{
     height: 150px;
     background-repeat: no-repeat;
     background-size: cover;
+    margin-top: 20px;
+    border-radius: 15px;
 }
 .card_title{
     font-size: var(--mobile-bigfont);
-    padding: 10px;
+    text-align: left;
+    padding: 10px 0px 0px 0px;
+}
+.card_details{
+    font-size: var(--mobile-smallfont);
+    line-height: 1.5rem;
 }
 @media (width > 768px){
     header{
@@ -192,6 +211,9 @@ main{
         display: flex;
         align-items: center;
         justify-content: space-between;
+    }
+    main{
+        height: 40vh;
     }
     .nav_bar{
         padding: 0;
@@ -220,6 +242,8 @@ main{
         background-color: var(--secondary-color);
         padding: 10px;
     }
-
+    .heading{
+        font-size: var(--big-font);
+    }
 
 }
