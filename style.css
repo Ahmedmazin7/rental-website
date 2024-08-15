@@ -11,7 +11,8 @@
 :root{
     --primary-color: #ff5700;
     --secondary-color: #ff8500;
-    --third-color: #d6d3ce; 
+    --third-color: #d6d3ce;
+    --fourth-color:#1A2537; 
     --bg-color:#F7F7F7;
 
     --big-font: 4rem;
@@ -73,11 +74,7 @@ nav{
     z-index: 9;
 
 }
-main{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
+
 .nav_bar{
     padding: 1rem;
     display: flex;
@@ -85,7 +82,7 @@ main{
     justify-content: space-between;
     gap: 2rem;
     background-color: var(--primary-color);
-
+    
 }
 .nav_menu_btn{
     font-size: 1.5rem;
@@ -121,83 +118,90 @@ main{
 
 }
 .banner{
-    background: url(nastuh-abootalebi-yWwob8kwOCk-unsplash.jpg);
-    width:100%;
-    height:20rem;
+    
+    width: 100%;
+    height:40vh;
     background-size: cover;
     display: flex;
     flex-direction: column;
-    align-items: center;
-}
-.container{
-    padding: 5rem 0rem 0rem 0rem;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    height: 40vh;
-    width: 100%;
-}
-.heading{
-    font-weight: 600;
-    color: var(--primary-color);
-    font-size: var(--mobile-smallfont);
-    background: transparent;
-    padding: 20px;
-    border-radius: 15px;
-}
-.headings{
-    font-size: var(--mobile-bigfont);
-    color: var(--primary-color);
-    padding: 20px;
-}
-.searchbar{
-    margin: 30px 0px 0px 0px;
-    width: 15rem;
-    border: none;
-    border-radius: 15px;
-    padding: 5px;
-}
-.cards_container{
-    display: grid;
-    width: 100%;
-    background-color: var(--bg-color);
-    margin: 10px 0px 0px 0px;
-    padding: 10px 5px 10px 50px;
-    border-radius: 15px;
-    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-    gap: 2rem;
-    overflow: hidden;
     justify-content: center;
 }
-.card{
-    background-color:var(--third-color);
-    width: 200px;
-    height: 300px;
-    border-radius:15px ;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0px 0px 0px 0px ;
-   text-align: left;
-}
-.image{
-    background-image: url(shifaaz-shamoon-Rl9l9mL6Pvs-unsplash.jpg);
-    width: 150px;
-    height: 150px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-top: 20px;
-    border-radius: 15px;
-}
-.card_title{
+.page_title{
     font-size: var(--mobile-bigfont);
-    text-align: left;
-    padding: 10px 0px 0px 0px;
+    color: var(--primary-color);
+    margin: 0px 0px 0px 100px;
 }
-.card_details{
+.explore_btn{
+    background-color: var(--primary-color);
+    padding: 10px;
+    color: var(--bg-color);
+    border: none;
+    border-radius: 25px;
+    margin: 10px 0px 0px 100px;
+}
+.dcp_container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    height: fit-content;
+    background-color: var(--fourth-color);
+    gap: 2rem;
+    align-items: center;
+}
+.dcp{
+    width: 200px;
+    color: var(--bg-color);
     font-size: var(--mobile-smallfont);
-    line-height: 1.5rem;
+    padding: 1rem;
+    text-align: center;
 }
+.dcp_title{
+    color: var(--secondary-color);
+    font-size: var(--mobile-bigfont);
+    padding: 5px;
+    text-align: center;
+}
+.services {
+    padding: 2rem;
+}
+.services h2 {
+    text-align: center;
+    color: #FF7F00;
+}
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.service-item {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    text-align: center;
+    font-size: var(--mobile-smallfont);
+}
+.service-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+footer{
+    background-color: var(--fourth-color);
+    color: var(--bg-color);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    gap: 1rem;
+}
+.f-cards{
+    text-align: center;
+    padding: 2rem;
+    width: 50vw;
+    color: var(--bg-color);
+    font-size: var(--mobile-smallfont);
+}
+#footer-headings{
+    font-size: var(--mobile-bigfont);
+    padding: 0rem 0rem 2rem 0rem;
+}
+
 @media (width > 768px){
     header{
         height: 100px;
@@ -207,10 +211,10 @@ main{
 
     nav{
         padding: 2.5rem 2rem;
-        position: static;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        position: static;
     }
     main{
         height: 40vh;
