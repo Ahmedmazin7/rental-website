@@ -118,7 +118,7 @@ nav{
 
 }
 .banner{
-    
+    background: url(shifaaz-shamoon-Rl9l9mL6Pvs-unsplash.jpg);
     width: 100%;
     height:40vh;
     background-size: cover;
@@ -139,29 +139,13 @@ nav{
     border-radius: 25px;
     margin: 10px 0px 0px 100px;
 }
-.dcp_container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-    height: fit-content;
-    background-color: var(--fourth-color);
-    gap: 2rem;
-    align-items: center;
+.explore_btn:hover{
+    background-color: var(--secondary-color);
 }
-.dcp{
-    width: 200px;
-    color: var(--bg-color);
-    font-size: var(--mobile-smallfont);
-    padding: 1rem;
-    text-align: center;
-}
-.dcp_title{
-    color: var(--secondary-color);
-    font-size: var(--mobile-bigfont);
-    padding: 5px;
-    text-align: center;
-}
+
 .services {
     padding: 2rem;
+    height: 50vh;
 }
 .services h2 {
     text-align: center;
@@ -169,15 +153,18 @@ nav{
 }
 .service-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
     gap: 1rem;
     margin-top: 1rem;
+    transition: 0.5s;
+    z-index: 1;
 }
 .service-item {
     border: 1px solid #ddd;
     padding: 1rem;
     text-align: center;
     font-size: var(--mobile-smallfont);
+    height: 100%;
 }
 .service-icon {
     font-size: 2rem;
@@ -187,19 +174,23 @@ footer{
     background-color: var(--fourth-color);
     color: var(--bg-color);
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
     gap: 1rem;
+    
 }
 .f-cards{
     text-align: center;
     padding: 2rem;
-    width: 50vw;
-    color: var(--bg-color);
+    width: 100%;
+    color: var(--label-color);
     font-size: var(--mobile-smallfont);
+}
+.f-cards a{
+    color: var(--label-color);
 }
 #footer-headings{
     font-size: var(--mobile-bigfont);
-    padding: 0rem 0rem 2rem 0rem;
+    color: var(--third-color);
 }
 
 @media (width > 768px){
